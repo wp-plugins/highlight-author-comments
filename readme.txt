@@ -1,5 +1,6 @@
 === Plugin Name ===
 Contributors: RobMarsh
+Donate link: http://rmarsh.com/donate/highlight-comment-author/
 Tags: comments, highlight, automatic
 Requires at least: 1.5
 Tested up to: 2.6.1
