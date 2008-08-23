@@ -38,7 +38,7 @@ function hac_highlight_comment($content){
 
 function hac_highlight_author($link){
 	global $comment;
-	if ($strtolower(comment->comment_author_email) !== strtolower(get_the_author_email())) 
+	if (strtolower($comment->comment_author_email) !== strtolower(get_the_author_email())) 
 		return $link;
 	else {
 		$options = get_option('hac_highlight_author_comments');
