@@ -4,7 +4,7 @@ Plugin Name: Highlight Author Comments
 Plugin URI: http://rmarsh.com/plugins/highlight-comments/
 Description: Automatically applies a distinctive style to comments by the post's author.
 Author: Rob Marsh, SJ
-Version: 1.0.2
+Version: 1.0.3
 Author URI: http://rmarsh.com/
 */ 
 
@@ -28,7 +28,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 function hac_highlight_comment($content){
 	global $comment;
-	if ($comment->comment_author_email !== get_the_author_email()) 
+	if (strtolower($comment->comment_author_email) !== strtolower(get_the_author_email())) 
 		return $content;
 	else {
 		$options = get_option('hac_highlight_author_comments');
@@ -38,7 +38,7 @@ function hac_highlight_comment($content){
 
 function hac_highlight_author($link){
 	global $comment;
-	if ($comment->comment_author_email !== get_the_author_email()) 
+	if ($strtolower(comment->comment_author_email) !== strtolower(get_the_author_email())) 
 		return $link;
 	else {
 		$options = get_option('hac_highlight_author_comments');
